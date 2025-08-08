@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Todo List</h1>
+    <div class="new-todo">
+      <input id="newTodoInput" type="text" placeholder="What needs to be done?" />
+      <button id="addTodoBtn" aria-label="Add todo">Add</button>
+    </div>
+
+    <div class="controls">
+      <label class="toggle-all">
+        <input id="toggleAll" type="checkbox" />
+        <span>Toggle All</span>
+      </label>
+
+      <div class="filters" role="radiogroup" aria-label="Filter todos">
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="active" aria-pressed="false">Active</button>
+        <button class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+    </div>
+
+    <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+
+    <div class="footer">
+      <span id="itemsLeft">0 items left</span>
+      <button id="clearCompleted" class="clear">Clear completed</button>
+    </div>
+  </div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
